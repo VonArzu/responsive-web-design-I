@@ -70,19 +70,18 @@ h1, h2, h3, h4, h5 {
   width: 880px;
   margin: 0 auto;
 }
-@media(max-width: 800px) {
-    .container {
-      background-color: red; 
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+
 /* header */
 
+header{
+width: 100%;
+display: flex;
+
+}
 
 header nav {
-  display: inline-block;
-  width: 691px;
+  display: flex;
+  width: 691px; 
   vertical-align: top;
   margin-top: 35px;
 }
@@ -93,12 +92,6 @@ header nav a {
   color: gray;
   text-decoration: none;
 }
-@media(max-width: 500px) {
-    header nav {
-      background-color: aqua; 
-      flex-direction: column;
-    }
-  }
 
 header nav a:hover {
   text-decoration: underline;
@@ -148,7 +141,14 @@ header .logo {
   display: inline-block;
   margin-top: 69px;
 }
+/* Tablet View */
 
+@media(max-width: 880px) {
+
+  .container {
+      width: 880px;
+  }
+}
 .main-content {
   border-top: 1px solid black;
   margin-top: 76px;
@@ -187,6 +187,20 @@ header .logo {
 .main-content .bottom-content .text-content:last-child {
   margin-right: 0;
 }
+/* Mobile View */
+
+@media(max-width: 550px) {
+
+  .container {
+      width: 550px;
+  }
+
+  header {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+  }
+}
 
 .contact {
   margin-top: 57px;
@@ -203,4 +217,5 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+
 
